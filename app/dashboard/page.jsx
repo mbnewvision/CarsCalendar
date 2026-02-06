@@ -1,0 +1,2 @@
+"use client"; import { useEffect,useState } from "react"; import Calendar from "@/components/Calendar"; import Navbar from "@/components/Navbar";
+export default function Dashboard(){ const [user,setUser]=useState(null); useEffect(()=>{const u=localStorage.getItem("user"); if(!u) window.location.href="/login"; setUser(u); },[]); return (<div><Navbar/><div className="p-6"><h1 className="text-2xl font-bold mb-6">Tableau de bord</h1><Calendar/></div></div>);}

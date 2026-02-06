@@ -1,0 +1,2 @@
+"use client"; import { useRouter } from "next/navigation";
+export default function Home() { const router = useRouter(); return (<div className="flex flex-col items-center justify-center h-screen text-center"><h1 className="text-4xl font-bold mb-4">Bienvenue dans CarFlow 🚗</h1><p className="mb-6">Gérez facilement vos véhicules et leurs réservations.</p><button onClick={()=>router.push("/login")} className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Se connecter</button></div>); }
